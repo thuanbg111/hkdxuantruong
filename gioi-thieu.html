@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giới thiệu – Hộ Kinh Doanh Tống Xuân Trưởng (4711)</title>
+  <style>
+    :root{
+      /* Palette đồng bộ index: đỏ đô + vàng */
+      --primary:#b91c1c;      /* red-700 */
+      --primary-600:#dc2626;  /* red-600 */
+      --gold:#f59e0b;         /* amber-500 */
+      --ink:#0f172a;          /* slate-900 */
+      --muted:#64748b;        /* slate-500/600 */
+      --card:#ffffff;
+      --bg:#fdfcfb;
+      --border:#e5e7eb;
+      --shadow:0 8px 28px rgba(185,28,28,.12);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);background:var(--bg);line-height:1.75
+    }
+
+    /* HEADER — giữ nguyên cấu trúc, đổi màu */
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--gold));
+      color:#fff;text-align:center;padding:18px 10px;box-shadow:var(--shadow)
+    }
+    header h1{margin:0 0 4px;font-size:24px}
+    header p{margin:0;opacity:.92;font-size:13px}
+    nav{margin-top:8px}
+    nav a{
+      display:inline-block;margin:0 8px;padding:9px 12px;border-radius:999px;
+      color:#fff;text-decoration:none;background:rgba(255,255,255,.14)
+    }
+    nav a:hover{background:rgba(255,255,255,.22)}
+
+    /* WRAP */
+    .wrap{max-width:1040px;margin:auto;padding:18px}
+
+    /* HERO */
+    .hero{
+      width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);
+      border:1px solid var(--border);box-shadow:var(--shadow)
+    }
+
+    h2.section-title{
+      color:var(--primary);text-align:center;margin:24px 0 6px;font-size:24px
+    }
+    .lead{
+      max-width:860px;margin:0 auto 18px;text-align:center;color:var(--muted)
+    }
+
+    /* Khối About */
+    .about{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:20px;margin-top:18px
+    }
+    .about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;align-items:center}
+    .about p{margin:8px 0}
+    .photo-stack{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .photo-stack img{
+      width:100%;height:180px;object-fit:cover;border-radius:12px;border:1px solid var(--border)
+    }
+
+    /* Giá trị cốt lõi */
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .value{
+      background:var(--card);border:1px solid var(--border);border-radius:14px;
+      box-shadow:var(--shadow);padding:16px;text-align:center
+    }
+    .value h3{margin:6px 0 4px;color:var(--primary)}
+    .value p{margin:0;color:#1f2937}
+
+    /* Cam kết */
+    .commit{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:18px;margin-top:18px
+    }
+    .commit ul{margin:8px 0;padding-left:20px}
+    .commit li{margin:6px 0}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+    .gallery img{
+      width:100%;height:200px;object-fit:cover;border-radius:12px;border:1px solid var(--border)
+    }
+
+    /* CTA */
+    .cta{margin:22px auto 10px;max-width:860px;text-align:center}
+    .cta a.button{
+      display:inline-block;background:linear-gradient(135deg,var(--primary),var(--gold));
+      color:#fff;text-decoration:none;padding:12px 18px;border-radius:12px;box-shadow:var(--shadow)
+    }
+    .cta a.button:hover{filter:brightness(1.05)}
+
+    /* FOOTER — giữ cấu trúc, đổi màu */
+    footer{background:#7f1d1d;color:#fff7ed;text-align:center;padding:14px 10px;margin-top:26px}
+
+    img{max-width:100%;height:auto}
+
+    /* Responsive */
+    @media (max-width:992px){
+      .values{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:768px){
+      header h1{font-size:20px}
+      .about-grid{grid-template-columns:1fr}
+      .values{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER giữ nguyên như file gốc, sửa nội dung -->
+  <header>
+    <h1>HỘ KINH DOANH TỐNG XUÂN TRƯỞNG</h1>
+    <p>Bán lẻ đồ uống – thuốc lá/thuốc lào (mã ngành 4711) • Thôn Tống Xuyên, X. Thái Hưng, H. Hưng Hà, T. Thái Bình</p>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="gioi-thieu.html">Giới thiệu</a>
+      <a href="hang-hoa.html">Hàng hóa</a>
+      <a href="lien-he.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero (giữ nguyên thẻ, thay ảnh nếu có) -->
+    <img class="hero" src="images/about-inside.jpg" alt="Giới thiệu Hộ Kinh Doanh Tống Xuân Trưởng – Hưng Hà, Thái Bình" loading="lazy"/>
+
+    <h2 class="section-title">Về Tống Xuân Trưởng</h2>
+    <p class="lead">
+      Cửa hàng bán lẻ thuộc <b>ngành 4711</b>, tập trung các mặt hàng thiết yếu hằng ngày: 
+      <b>đồ uống</b>, <b>thuốc lá/thuốc lào</b> và một số mặt hàng tạp hóa thông dụng. 
+      Cam kết <b>nguồn gốc rõ ràng – giá hợp lý – phục vụ nhanh</b> tại địa phương.
+    </p>
+
+    <!-- About -->
+    <section class="about">
+      <div class="about-grid">
+        <div>
+          <h3 style="color:var(--primary);margin:0 0 6px;">Gần gũi – Đủ hàng – Giá minh bạch</h3>
+          <p>
+            Danh mục chú trọng nhóm hàng 4711: nước giải khát, sữa, trà/cà phê, bia;
+            cùng cung ứng <b>thuốc lá/thuốc lào</b> theo đúng quy định hiện hành
+            và các mặt hàng tiện ích, tạp hóa phục vụ sinh hoạt hằng ngày.
+          </p>
+          <p>
+            Hàng hóa được <b>niêm yết giá rõ ràng</b>, bảo quản đúng quy cách. Trải nghiệm mua sắm
+            nhanh – gọn – thuận tiện cho hộ gia đình và khách lẻ trong khu vực.
+          </p>
+          <p style="color:var(--muted);margin-top:6px;">
+            Địa chỉ: Thôn Tống Xuyên, Xã Thái Hưng, Huyện Hưng Hà, Tỉnh Thái Bình
+            Điện thoại: 0345 565 023 • Đăng ký lần đầu: 29/10/2024
+          </p>
+        </div>
+        <div class="photo-stack">
+          <img src="images/about-shelves.jpg" alt="Kệ hàng – sắp xếp ngăn nắp" loading="lazy">
+          <img src="images/about-clients.jpg" alt="Phục vụ thân thiện – khách hàng địa phương" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Giá trị cốt lõi -->
+    <h2 class="section-title">Giá trị cốt lõi</h2>
+    <p class="lead">Những nguyên tắc giúp chúng tôi xứng đáng với niềm tin của khách hàng.</p>
+    <section class="values">
+      <article class="value">
+        <div style="font-size:28px">✅</div>
+        <h3>Chất lượng & Nguồn gốc</h3>
+        <p>Ưu tiên sản phẩm có nhãn mác, hạn dùng rõ ràng; bảo quản chuẩn.</p>
+      </article>
+      <article class="value">
+        <div style="font-size:28px">🏷️</div>
+        <h3>Giá minh bạch</h3>
+        <p>Niêm yết công khai, tư vấn lựa chọn phù hợp ngân sách.</p>
+      </article>
+      <article class="value">
+        <div style="font-size:28px">🤝</div>
+        <h3>Phục vụ tận tâm</h3>
+        <p>Thân thiện, nhanh chóng; hỗ trợ đặt trước và giữ hàng.</p>
+      </article>
+    </section>
+
+    <!-- Cam kết -->
+    <section class="commit">
+      <h2 class="section-title" style="margin-top:0">Cam kết của Tống Xuân Trưởng</h2>
+      <ul>
+        <li>Hàng thiết yếu luôn sẵn: đồ uống, thuốc lá/thuốc lào, tạp hóa thông dụng.</li>
+        <li>Đổi trả linh hoạt với sản phẩm lỗi do nhà sản xuất.</li>
+        <li>Mở rộng danh mục theo nhu cầu khu vực, phục vụ kịp thời.</li>
+        <li>Giữ vệ sinh – sắp xếp gọn gàng – dễ tìm kiếm.</li>
+      </ul>
+    </section>
+
+    <!-- Gallery -->
+    <h2 class="section-title">Góc cửa hàng</h2>
+    <p class="lead">Một vài khoảnh khắc thường ngày tại cửa hàng.</p>
+    <section class="gallery">
+      <img src="images/about-delivery.jpg"  alt="Nhận hàng & kiểm kê" loading="lazy">
+      <img src="images/about-team.jpg"      alt="Phục vụ thân thiện" loading="lazy">
+      <img src="images/do-uong.jpg"         alt="Đồ uống – nhóm hàng chủ lực" loading="lazy">
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <p class="lead">Cần tìm sản phẩm cụ thể hoặc muốn đặt trước? Chúng tôi luôn sẵn sàng hỗ trợ.</p>
+      <a class="button" href="lien-he.html">Liên hệ Tống Xuân Trưởng</a>
+    </div>
+  </main>
+
+  <!-- FOOTER — giữ nguyên bố cục -->
+  <footer>
+    © 2025 Hộ Kinh Doanh Tống Xuân Trưởng – Thôn Tống Xuyên, Xã Thái Hưng, Huyện Hưng Hà, Tỉnh Thái Bình, Việt Nam • ĐT: 0345 565 023
+  </footer>
+</body>
+</html>

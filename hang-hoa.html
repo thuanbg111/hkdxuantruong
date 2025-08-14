@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sản phẩm – Hộ Kinh Doanh Tống Xuân Trưởng (4711)</title>
+  <style>
+    :root{
+      /* Palette đồng bộ trang chủ: đỏ đô + vàng */
+      --primary:#b91c1c;        /* red-700 */
+      --gold:#f59e0b;           /* amber-500 */
+      --border:#e5e7eb;
+      --shadow:0 6px 24px rgba(185,28,28,.12);
+    }
+
+    /* Footer luôn chạm đáy */
+    html, body { height: 100%; }
+    body{
+      margin:0; display:flex; flex-direction:column; min-height:100vh;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:#0f172a; background:#fdfcfb; line-height:1.65;
+    }
+    main{ flex:1; }
+
+    /* Header giữ bố cục, đổi màu */
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--gold));
+      color:#fff; text-align:center; padding:18px 10px; box-shadow:var(--shadow);
+    }
+    header h1{ margin:0 0 6px; font-size:24px; letter-spacing:.2px }
+    header p{ margin:4px 0 0; opacity:.92; font-size:13px }
+
+    /* ===== NAV mặc định (desktop) ===== */
+    nav{ margin-top:8px }
+    nav a{
+      color:#fff; text-decoration:none; font-weight:600; margin:0 8px;
+      padding:9px 12px; border-radius:999px; background:rgba(255,255,255,.14)
+    }
+    nav a:hover{ background:rgba(255,255,255,.22) }
+
+    .wrap{ max-width:1040px; margin:auto; padding:18px }
+    h2{ color:#b91c1c; text-align:center; margin:18px 0 }
+
+    .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px }
+    .item{
+      background:#fff; border:1px solid var(--border); border-radius:14px;
+      box-shadow:var(--shadow); overflow:hidden; transition:transform .18s ease;
+    }
+    .item:hover{ transform:translateY(-2px) }
+    .item img{ width:100%; height:190px; object-fit:cover; display:block }
+    .item h3{ margin:10px 0 0; text-align:center; color:#b91c1c; font-size:18px }
+    .item p{ margin:8px 12px 16px; text-align:center; color:#1f2937; font-size:14px }
+
+    /* ===== MOBILE FIX cho NAV (lấy cách làm từ file sản phẩm Mai Thị Hà) ===== */
+    @media(max-width:768px){
+      header h1{ font-size:20px }
+
+      /* Bọc dòng, khoảng cách đều, bỏ margin cũ trên <a> để tránh đè nhau */
+      nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:8px;                 /* thay cho margin trên <a> */
+        margin-top:8px;
+      }
+      nav a{
+        margin:0;                /* bỏ margin cũ để không chồng chéo */
+        padding:8px 12px;        /* thu nhỏ cho vừa màn hình */
+        font-size:14px;
+        line-height:1;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        /* Tùy chọn: muốn 2 nút/1 hàng, mở comment dòng dưới */
+        /* flex: 1 1 calc(50% - 8px); */
+      }
+
+      .grid{ grid-template-columns:1fr }
+    }
+
+    footer{
+      background:#7f1d1d; color:#fff7ed; text-align:center; padding:14px 10px; margin-top:24px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>HỘ KINH DOANH TỐNG XUÂN TRƯỞNG</h1>
+  <p>Bán lẻ đồ uống – thuốc lá/thuốc lào (4711) • Thôn Tống Xuyên, X. Thái Hưng, H. Hưng Hà, T. Thái Bình</p>
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioi-thieu.html">Giới thiệu</a>
+    <a href="hang-hoa.html">Hàng hóa</a>
+    <a href="lien-he.html">Liên hệ</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <h2>Danh mục hàng bán</h2>
+  <div class="grid">
+    <article class="item">
+      <img src="images/danh-muc-luong-thuc.jpg" alt="Lương thực: gạo, nếp, mì/bún khô" loading="lazy">
+      <h3>Lương thực</h3>
+      <p>Gạo tẻ/nếp, mì – bún khô, ngũ cốc… phục vụ nhu cầu hằng ngày.</p>
+    </article>
+
+    <article class="item">
+      <img src="images/danh-muc-thuc-pham.jpg" alt="Thực phẩm khô & đồ hộp" loading="lazy">
+      <h3>Thực phẩm</h3>
+      <p>Mắm muối, dầu ăn, gia vị, đồ hộp, đồ khô… nguồn gốc rõ ràng.</p>
+    </article>
+
+    <article class="item">
+      <img src="images/danh-muc-do-uong.jpg" alt="Đồ uống – sữa – nước giải khát – bia" loading="lazy">
+      <h3>Đồ uống</h3>
+      <p>Nước giải khát, sữa, trà/cà phê lon, bia… đa dạng thương hiệu.</p>
+    </article>
+
+    <article class="item">
+      <img src="images/danh-muc-thuoc-la.jpg" alt="Thuốc lá / Thuốc lào" loading="lazy">
+      <h3>Thuốc lá / Thuốc lào</h3>
+      <p>Cung ứng theo đúng quy định hiện hành; chỉ bán cho khách đủ điều kiện.</p>
+    </article>
+
+    <article class="item">
+      <img src="images/hoa-my-pham.jpg" alt="Hóa – mỹ phẩm, tẩy rửa" loading="lazy">
+      <h3>Hóa – mỹ phẩm</h3>
+      <p>Bột giặt, nước rửa chén, dầu gội, sữa tắm, nước lau nhà…</p>
+    </article>
+
+    <article class="item">
+      <img src="images/danh-muc-tien-ich.jpg" alt="Đồ tiện ích gia đình" loading="lazy">
+      <h3>Tiện ích</h3>
+      <p>Pin – bật lửa, giấy vệ sinh, văn phòng phẩm nhỏ… luôn sẵn.</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  © 2025 Hộ Kinh Doanh Tống Xuân Trưởng – Thôn Tống Xuyên, Xã Thái Hưng, Huyện Hưng Hà, Tỉnh Thái Bình, Việt Nam • ĐT: 0345 565 023
+</footer>
+</body>
+</html>
